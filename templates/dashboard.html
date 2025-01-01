@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to your dashboard</h2>
+        <form action="{{ url_for('update_bio') }}" method="POST">
+            <textarea name="bio_link" placeholder="Enter your bio link" required>{{ bio_link }}</textarea>
+            <button type="submit">Update Bio Link</button>
+        </form>
+        <br>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>
